@@ -1,89 +1,110 @@
 <!-- Your_Details urfe Feedback -->
 
-
 <?php include 'header.php'; ?>
 <?php include 'db.php'; ?>
-<link rel="stylesheet" href="style.css">
 
-<h2 style="text-align: center; font-family: Arial, sans-serif; margin-top: 30px; font-size: 28px;">Feedback</h2>
+<h2 style="
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+">Feedback</h2>
 
 <form action="process_user_details.php" method="POST" style="
     max-width: 500px;
     margin: 30px auto;
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #ffffff, #f3f7ff);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
     font-family: 'Segoe UI', sans-serif;
+    color: #444;
 ">
 
-    <label style="display: block; margin-bottom: 8px; font-weight: bold;">Name:</label>
+    <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px;">Name:</label>
     <input type="text" name="name" required style="
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         border: 1px solid #ccc;
-        border-radius: 6px;
-        margin-bottom: 15px;
-    ">
+        border-radius: 8px;
+        margin-bottom: 16px;
+        font-size: 14px;
+        transition: 0.3s;
+    " onfocus="this.style.borderColor='#4CAF50'" onblur="this.style.borderColor='#ccc'">
 
-    <label style="display: block; margin-bottom: 8px; font-weight: bold;">Username:</label>
+    <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px;">Username:</label>
     <input type="text" name="username" required style="
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         border: 1px solid #ccc;
-        border-radius: 6px;
-        margin-bottom: 15px;
-    ">
+        border-radius: 8px;
+        margin-bottom: 16px;
+        font-size: 14px;
+        transition: 0.3s;
+    " onfocus="this.style.borderColor='#4CAF50'" onblur="this.style.borderColor='#ccc'">
 
-    <label style="display: block; margin-bottom: 8px; font-weight: bold;">Email:</label>
+    <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px;">Email:</label>
     <input type="email" name="email" required style="
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         border: 1px solid #ccc;
-        border-radius: 6px;
-        margin-bottom: 15px;
-    ">
+        border-radius: 8px;
+        margin-bottom: 16px;
+        font-size: 14px;
+        transition: 0.3s;
+    " onfocus="this.style.borderColor='#4CAF50'" onblur="this.style.borderColor='#ccc'">
 
-    <label style="display: block; margin-bottom: 8px; font-weight: bold;">Phone Number:</label>
+    <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px;">Phone Number:</label>
     <input type="text" name="phone" required style="
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         border: 1px solid #ccc;
-        border-radius: 6px;
-        margin-bottom: 15px;
-    ">
+        border-radius: 8px;
+        margin-bottom: 16px;
+        font-size: 14px;
+        transition: 0.3s;
+    " onfocus="this.style.borderColor='#4CAF50'" onblur="this.style.borderColor='#ccc'">
 
-    <label style="display: block; margin-bottom: 8px; font-weight: bold;">Location:</label>
+    <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px;">Location:</label>
     <input type="text" name="location" required style="
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         border: 1px solid #ccc;
-        border-radius: 6px;
-        margin-bottom: 15px;
-    ">
+        border-radius: 8px;
+        margin-bottom: 16px;
+        font-size: 14px;
+        transition: 0.3s;
+    " onfocus="this.style.borderColor='#4CAF50'" onblur="this.style.borderColor='#ccc'">
 
-    <label style="display: block; margin-bottom: 8px; font-weight: bold;">Message:</label>
+    <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px;">Message:</label>
     <textarea name="message" rows="4" required style="
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         border: 1px solid #ccc;
-        border-radius: 6px;
+        border-radius: 8px;
         resize: vertical;
         margin-bottom: 20px;
-    "></textarea>
+        font-size: 14px;
+        transition: 0.3s;
+    " onfocus="this.style.borderColor='#4CAF50'" onblur="this.style.borderColor='#ccc'"></textarea>
 
     <button type="submit" style="
         width: 100%;
         background-color: #4CAF50;
         color: white;
-        padding: 12px;
+        padding: 14px;
         font-size: 16px;
+        font-weight: bold;
         border: none;
-        border-radius: 6px;
+        border-radius: 8px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
-    ">Submit</button>
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    " onmouseover="this.style.backgroundColor='#45a049'; this.style.transform='scale(1.02)';"
+      onmouseout="this.style.backgroundColor='#4CAF50'; this.style.transform='scale(1)';">Submit</button>
 </form>
+
 
 
 

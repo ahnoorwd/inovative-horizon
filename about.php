@@ -1,36 +1,107 @@
 <?php include 'header.php'; ?>
 <link rel="stylesheet" href="style.css">
 
-<div style="max-width: 800px; margin: 40px auto; padding: 20px; background: #f9f9f9; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); font-family: Arial, sans-serif; color: #333;">
-    <h2 style="text-align: center; font-size: 32px; color: #1e3a8a; margin-bottom: 20px;">About Us</h2>
-    <p style="line-height: 1.8; font-size: 16px;">
+<div style="
+    max-width: 900px; 
+    margin: 50px auto; 
+    padding: 30px; 
+    background: linear-gradient(135deg, #ffffff, #f3f6fc); 
+    border-radius: 16px; 
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08); 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    color: #333; 
+    transition: transform 0.3s ease;
+">
+    <h2 style="
+        text-align: center; 
+        font-size: 36px; 
+        color: #1e3a8a; 
+        margin-bottom: 25px;
+        letter-spacing: 1px;
+    ">
+        About Us
+    </h2>
+
+    <p style="line-height: 1.9; font-size: 17px; margin-bottom: 15px;">
         Welcome to <strong>Innovative Horizon's</strong> – your gateway to future-ready learning! Founded at the beginning of <strong>2025</strong> by just two passionate individuals, our mission has always been clear: <em>empower learners through technology-focused education</em>. What started as a small vision has now grown into a dynamic platform where knowledge meets innovation.
     </p>
-    <p style="line-height: 1.8; font-size: 16px;">
+
+    <p style="line-height: 1.9; font-size: 17px; margin-bottom: 15px;">
         At <strong>Innovative Horizon's</strong>, we offer carefully designed <strong>technology courses</strong> that are not just educational, but also practical and future-oriented. From coding to digital tools, we focus on the skills that matter most in today's tech-driven world.
     </p>
-    <p style="line-height: 1.8; font-size: 16px;">
+
+    <p style="line-height: 1.9; font-size: 17px;">
         With dedication, expertise, and a shared commitment to making learning accessible, we built this platform from scratch – and we’re excited to grow alongside our learners. Whether you’re just starting or looking to level up, you’ll find the right resources, community, and support here.
     </p>
 
-    <hr style="margin: 30px 0; border: 1px solid #ddd;">
+    <hr style="margin: 30px 0; border: none; height: 2px; background: linear-gradient(to right, transparent, #ccc, transparent);">
 
-    <h3 style="text-align: center; font-size: 24px; color: #1e3a8a;">Reach Us On</h3>
-    <div style="display: flex; justify-content: center; gap: 25px; margin-top: 20px;">
-        <a href="#" target="_blank" title="Facebook" style="text-decoration: none; color: #3b5998; font-size: 22px;">
+    <h3 style="
+        text-align: center; 
+        font-size: 26px; 
+        color: #1e3a8a; 
+        margin-bottom: 20px;
+    ">
+        Reach Us On
+    </h3>
+
+    <div style="
+        display: flex; 
+        justify-content: center; 
+        flex-wrap: wrap;
+        gap: 25px; 
+        margin-top: 20px;
+    ">
+        <a href="#" target="_blank" title="Facebook" style="
+            text-decoration: none; 
+            color: #3b5998; 
+            font-size: 22px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            background: rgba(59, 89, 152, 0.08);
+            transition: all 0.3s ease;
+        " onmouseover="this.style.background='rgba(59,89,152,0.2)'" onmouseout="this.style.background='rgba(59,89,152,0.08)'">
             <i class="fa fa-facebook-official"></i> Facebook
         </a>
-        <a href="#" target="_blank" title="Instagram" style="text-decoration: none; color: #e4405f; font-size: 22px;">
+
+        <a href="#" target="_blank" title="Instagram" style="
+            text-decoration: none; 
+            color: #e4405f; 
+            font-size: 22px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            background: rgba(228, 64, 95, 0.08);
+            transition: all 0.3s ease;
+        " onmouseover="this.style.background='rgba(228,64,95,0.2)'" onmouseout="this.style.background='rgba(228,64,95,0.08)'">
             <i class="fa fa-instagram"></i> Instagram
         </a>
-        <a href="#" target="_blank" title="LinkedIn" style="text-decoration: none; color: #0077b5; font-size: 22px;">
+
+        <a href="#" target="_blank" title="LinkedIn" style="
+            text-decoration: none; 
+            color: #0077b5; 
+            font-size: 22px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            background: rgba(0, 119, 181, 0.08);
+            transition: all 0.3s ease;
+        " onmouseover="this.style.background='rgba(0,119,181,0.2)'" onmouseout="this.style.background='rgba(0,119,181,0.08)'">
             <i class="fa fa-linkedin"></i> LinkedIn
         </a>
-        <a href="mailto:info@innovativehorizons.com" title="Email" style="text-decoration: none; color: #555; font-size: 22px;">
+
+        <a href="mailto:info@innovativehorizons.com" title="Email" style="
+            text-decoration: none; 
+            color: #555; 
+            font-size: 22px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            background: rgba(85, 85, 85, 0.08);
+            transition: all 0.3s ease;
+        " onmouseover="this.style.background='rgba(85,85,85,0.2)'" onmouseout="this.style.background='rgba(85,85,85,0.08)'">
             <i class="fa fa-envelope"></i> Email
         </a>
     </div>
 </div>
+
 
 
 

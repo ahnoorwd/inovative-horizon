@@ -81,13 +81,9 @@
 
 
 
-
-
-
-
 <!-- OUR SUCCESS STORY SECTION -->
 <section style="padding: 50px 20px; background: #f0f4f8; font-family: 'Poppins', sans-serif;">
-  <h2 style="text-align: center; color: #2c3e50; margin-bottom: 40px;">Our Success Stories</h2>
+  <h2 style="text-align: center; color: #2c3e50; margin-bottom: 40px;">🎉 Our Success Stories 🎉</h2>
   
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto;">
   
@@ -159,18 +155,6 @@
   
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- footer star's here  -->
 
