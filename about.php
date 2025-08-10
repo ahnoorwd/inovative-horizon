@@ -41,7 +41,7 @@
     <div style="flex: 1 1 300px; margin-bottom: 20px;">
       <h3 style="margin-bottom: 15px; font-size: 20px; border-bottom: 2px solid white; display: inline-block;">Innovative Horizon's</h3>
       <p style="font-size: 14px; line-height: 1.6;">
-        Empowering learners since 2025 with future-ready technology education. Built by two passionate minds, now expanding with you.
+        Empowering learners since 2025 with future-ready <br> technology education. Built by two <br> passionate minds, now expanding with you.
       </p>
     </div>
 

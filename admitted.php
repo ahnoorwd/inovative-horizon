@@ -2,28 +2,65 @@
 <?php include './db.php'; ?>
 <link rel="stylesheet" href="style.css">
 
-<h2 style="text-align: center; font-family: Arial, sans-serif; color: #2c3e50; margin-top: 40px;">Admitted Students</h2>
+<h2 style="
+    text-align: center; 
+    font-family: 'Poppins', sans-serif; 
+    color: #2c3e50; 
+    margin-top: 40px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+">
+    🎓 Admitted Students 🎓
+</h2>
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px;">
+<div style="
+    padding: 40px 20px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 25px;
+    min-height: 100vh;
+    /* background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); */
+">
 <?php
 $result = $conn->query("SELECT * FROM enrolments");
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo "<div style='flex: 1 1 calc(25% - 20px); max-width: 300px; border: 1px solid #ddd; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; background: #ffffff; font-family: Arial, sans-serif; transition: transform 0.3s ease;'>";
-        echo "<h3 style='color: #2c3e50; margin-bottom: 10px;'>" . $row['name'] . "</h3>";
-        echo "<p style='margin: 5px 0; color: #34495e;'>Email: <strong>" . $row['email'] . "</strong></p>";
-        echo "<p style='margin: 5px 0; color: #16a085;'>Course: <strong>" . $row['course'] . "</strong></p>";
-        echo "</div>";
+        echo "<div style='
+            flex: 1 1 calc(25% - 20px); 
+            max-width: 300px; 
+            padding: 20px; 
+            border-radius: 15px; 
+            background: #ffffff; 
+            box-shadow: 0 8px 20px rgba(255,255,255,0.4); 
+            text-align: center; 
+            font-family: Poppins, sans-serif; 
+            color: #2c3e50;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        ' 
+        onmouseover=\"this.style.transform='scale(1.08)'; this.style.boxShadow='0 15px 30px rgba(255,255,255,0.7)';\" 
+        onmouseout=\"this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(255,255,255,0.4)';\">
+            <h3 style='
+                font-size: 1.4em;
+                margin-bottom: 10px;
+                border-bottom: 2px solid rgba(0,0,0,0.1);
+                padding-bottom: 5px;
+            '>" . $row['name'] . "</h3>
+            <p style='margin: 8px 0; color: #ff9800;'>📧 " . $row['email'] . "</p>
+            <p style='margin: 8px 0; color: #388e3c;'>📘 " . $row['course'] . "</p>
+        </div>";
     }
 } else {
-    echo "<p style='text-align: center; font-family: Arial, sans-serif;'>No admitted students yet.</p>";
+    echo "<p style='
+        text-align: center; 
+        font-family: Poppins, sans-serif; 
+        color: white; 
+        font-size: 1.2em;
+    '>No admitted students yet.</p>";
 }
 ?>
 </div>
-
-
-
 
 
 
@@ -33,7 +70,7 @@ if ($result->num_rows > 0) {
     <div style="flex: 1 1 300px; margin-bottom: 20px;">
       <h3 style="margin-bottom: 15px; font-size: 20px; border-bottom: 2px solid white; display: inline-block;">Innovative Horizon's</h3>
       <p style="font-size: 14px; line-height: 1.6;">
-        Empowering learners since 2025 with future-ready technology education. Built by two passionate minds, now expanding with you.
+        Empowering learners since 2025 with future-ready <br> technology education. Built by two <br> passionate minds, now expanding with you.
       </p>
     </div>
 

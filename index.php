@@ -1,16 +1,3 @@
-<!-- <?php include 'header.php'; ?>
-<link rel="stylesheet" href="./style.css">
-
-<div class="hero" style="background-image: url('banner.jpg');"></div>
-
-<div class="cards">
-    <?php for($i=1; $i<=5; $i++): ?>
-        <div class="card">
-            <h3>Course <?php echo $i; ?></h3>
-            <p>Shortwww description for course <?php echo $i; ?>.</p>
-        </div>
-    <?php endfor; ?>
-</div> -->
 
 <?php include 'header.php'; ?>
 
@@ -32,12 +19,38 @@
         <a href="./courses.php" class="hero-btn">View Courses</a>
     </div>
 </div>
+<!-- Add this inside your <head> or in a <style> block -->
+<style>
+  .slide-up {
+    transform: translateY(150px);
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
+  }
+
+  .slide-up:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  .slide-up:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes slideUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
 
 <!-- COURSES SECTION -->
+ <div>
+  <h1 style="text-align:center">Our Trainers</h1>
+ </div>
 <div id="trainers" style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; padding: 40px 20px;">
 
   <!-- Trainer 1 -->
-  <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; width: 280px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center;">
+  <div class="slide-up" style="background: #f8f9fa; padding: 20px; border-radius: 10px; width: 280px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center;">
     <img src="./noorprofile1.png" alt="Trainer 1" 
          style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
     <h3 style="margin-bottom: 8px;">Abul Hannan Noor</h3>
@@ -51,7 +64,7 @@
   </div>
 
   <!-- Trainer 2 -->
-  <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; width: 280px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center;">
+  <div class="slide-up" style="background: #f8f9fa; padding: 20px; border-radius: 10px; width: 280px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center;">
     <img src="./trainer2.jpg" alt="Trainer 2" 
          style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
     <h3 style="margin-bottom: 8px;">Abu Saleh Al Amin</h3>
@@ -67,6 +80,98 @@
 </div>
 
 
+
+
+
+
+
+<!-- OUR SUCCESS STORY SECTION -->
+<section style="padding: 50px 20px; background: #f0f4f8; font-family: 'Poppins', sans-serif;">
+  <h2 style="text-align: center; color: #2c3e50; margin-bottom: 40px;">Our Success Stories</h2>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto;">
+  
+    <!-- Card 1 -->
+    <div style="background: white; border-radius: 12px; width: 320px; padding: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.05)';"
+         onmouseout="this.style.transform='scale(1)';">
+      <img src="./stu_1.jpg" alt="Sarah Ahmed" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #2575fc;">
+      <h3 style="color: #2575fc; margin-bottom: 12px;">Sarah Ahmed</h3>
+      <p style="color: #555; font-size: 14px; line-height: 1.5;">
+        Completed full-stack course, now working at a leading tech firm. Passionate about mentoring juniors.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div style="background: white; border-radius: 12px; width: 320px; padding: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.05)';"
+         onmouseout="this.style.transform='scale(1)';">
+      <img src="./stu_1.jpg" alt="Rafiq Islam" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #2575fc;">
+      <h3 style="color: #2575fc; margin-bottom: 12px;">Rafiq Islam</h3>
+      <p style="color: #555; font-size: 14px; line-height: 1.5;">
+        Founded a startup post completing React & NodeJS course, recognized locally for innovation.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div style="background: white; border-radius: 12px; width: 320px; padding: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.05)';"
+         onmouseout="this.style.transform='scale(1)';">
+      <img src="./stu_1.jpg" alt="Mina Rahman" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #2575fc;">
+      <h3 style="color: #2575fc; margin-bottom: 12px;">Mina Rahman</h3>
+      <p style="color: #555; font-size: 14px; line-height: 1.5;">
+        Secured remote dev role after mastering PHP & MongoDB. Active tech blogger and speaker.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div style="background: white; border-radius: 12px; width: 320px; padding: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.05)';"
+         onmouseout="this.style.transform='scale(1)';">
+      <img src="./stu_1.jpg" alt="Nusrat Jahan" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #2575fc;">
+      <h3 style="color: #2575fc; margin-bottom: 12px;">Nusrat Jahan</h3>
+      <p style="color: #555; font-size: 14px; line-height: 1.5;">
+        Frontend developer specialized in React. Built multiple client projects post training.
+      </p>
+    </div>
+
+    <!-- Card 5 -->
+    <div style="background: white; border-radius: 12px; width: 320px; padding: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.05)';"
+         onmouseout="this.style.transform='scale(1)';">
+      <img src="./stu_1.jpg" alt="Imran Hossain" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #2575fc;">
+      <h3 style="color: #2575fc; margin-bottom: 12px;">Imran Hossain</h3>
+      <p style="color: #555; font-size: 14px; line-height: 1.5;">
+        Backend expert with strong PHP & MongoDB skills, currently leading projects at a reputed firm.
+      </p>
+    </div>
+
+    <!-- Card 6 -->
+    <div style="background: white; border-radius: 12px; width: 320px; padding: 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease; cursor: pointer;"
+         onmouseover="this.style.transform='scale(1.05)';"
+         onmouseout="this.style.transform='scale(1)';">
+      <img src="./stu_1.jpg" alt="Fatima Begum" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #2575fc;">
+      <h3 style="color: #2575fc; margin-bottom: 12px;">Fatima Begum</h3>
+      <p style="color: #555; font-size: 14px; line-height: 1.5;">
+        Full-stack developer thriving in a startup environment, passionate about JavaScript & UX design.
+      </p>
+    </div>
+  
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- footer star's here  -->
 
 <footer style="background-color: #4d4daef2; color: white; padding: 40px 20px 10px; font-family: Arial, sans-serif;">
@@ -75,7 +180,7 @@
     <div style="flex: 1 1 300px; margin-bottom: 20px;">
       <h3 style="margin-bottom: 15px; font-size: 20px; border-bottom: 2px solid white; display: inline-block;">Innovative Horizon's</h3>
       <p style="font-size: 14px; line-height: 1.6;">
-        Empowering learners since 2025 with future-ready technology education. Built by two passionate minds, now expanding with you.
+        Empowering learners since 2025 with future-ready <br> technology education. Built by two <br> passionate minds, now expanding with you.
       </p>
     </div>
 
