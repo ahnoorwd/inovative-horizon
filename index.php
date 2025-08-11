@@ -51,7 +51,7 @@
 
   <!-- Trainer 1 -->
   <div class="slide-up" style="background: #f8f9fa; padding: 20px; border-radius: 10px; width: 280px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center;">
-    <img src="./noorprofile1.png" alt="Trainer 1" 
+    <img style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 1px solid black;" src="./noorprofile1.png" alt="Trainer 1" 
          style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
     <h3 style="margin-bottom: 8px;">Abul Hannan Noor</h3>
     <p style="font-size: 14px; margin-bottom: 6px;"><strong>Skills:</strong>  HTML, CSS, React, NodeJs, MongDb, Php</p>
@@ -65,7 +65,7 @@
 
   <!-- Trainer 2 -->
   <div class="slide-up" style="background: #f8f9fa; padding: 20px; border-radius: 10px; width: 280px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); text-align: center;">
-    <img src="./trainer2.jpg" alt="Trainer 2" 
+    <img style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 1px solid black;" src="./trainer2.jpg" alt="Trainer 2" 
          style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
     <h3 style="margin-bottom: 8px;">Abu Saleh Al Amin</h3>
     <p style="font-size: 14px; margin-bottom: 6px;"><strong>Skills:</strong> HTML, CSS, React, NodeJs, MongDb, Php</p>
@@ -155,6 +155,86 @@
   
   </div>
 </section>
+
+
+<!-- PAYMENT SYSTEM SECTION -->
+<?php
+// Database connection
+$conn = new mysqli("localhost", "root", "", "education_platform");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
+<!-- PAYMENT SECTION -->
+<section style="padding: 50px 20px; background: #eef3f7; font-family: 'Poppins', sans-serif;">
+  <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">💳 Payment System</h2>
+
+  <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+
+    <!-- Pay Your Bill Card -->
+    <div style="
+        background: white;
+        border-radius: 12px;
+        width: 320px;
+        padding: 20px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      "
+      onclick="window.location.href='payment.php'">
+      <img src="./payment-icon.png" alt="Payment" style="width: 80px; margin-bottom: 15px;">
+      <h3 style="color: #2575fc; margin-bottom: 12px;">Pay Your Bill</h3>
+      <p style="color: #555; font-size: 14px; line-height: 1.5;">
+        Securely pay your course fees online. Click here to proceed to our payment page.
+      </p>
+      <button style="
+          margin-top: 15px;
+          background: #2575fc;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+        "
+        onmouseover="this.style.background='#1b5dcc'"
+        onmouseout="this.style.background='#2575fc'">
+        Go to Payment
+      </button>
+    </div>
+
+    <!-- Payment History Card -->
+    <div style="
+        background: white;
+        border-radius: 12px;
+        width: 320px;
+        padding: 20px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      ">
+      <h4 style="margin-bottom: 15px; color: #2575fc;">Your Payment History</h4>
+      <?php
+      // Get the last 5 payments (you can filter by logged-in student if you have login system)
+      $result = $conn->query("SELECT payment_date, amount, payment_method FROM payments ORDER BY payment_date DESC LIMIT 5");
+      if ($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+              echo "<p style='font-size: 14px; margin: 5px 0;'>
+                      <strong>" . date("d M Y", strtotime($row['payment_date'])) . "</strong> — " .
+                      number_format($row['amount'], 2) . " USD (" . htmlspecialchars($row['payment_method']) . ")
+                    </p>";
+          }
+      } else {
+          echo "<p style='font-size: 14px; color: gray;'>No payments found.</p>";
+      }
+      ?>
+    </div>
+
+  </div>
+</section>
+
+
+
 
 <!-- footer star's here  -->
 
